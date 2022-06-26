@@ -1,0 +1,24 @@
+{
+  "name": "typescript-sort-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahabubAlahi/typescript-sort-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahabubAlahi/typescript-sort-project/issues"
+  },
+  "homepage": "https://github.com/mahabubAlahi/typescript-sort-project#readme",
+  "dependencies": {
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.18"
+  }
+}

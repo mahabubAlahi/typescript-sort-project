@@ -9,8 +9,8 @@ class Sorter {
     sort() {
         let { length } = this.collection;
         let i = 0;
-        while (i < length - 1) {
-            let j = length;
+        while (i < length) {
+            let j = length - 1;
             let start = 0;
             while (start < j) {
                 if (this.collection.compare(start, start + 1)) {

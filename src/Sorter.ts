@@ -1,8 +1,13 @@
-import { NumbersCollection } from './NumbersCollection'
+
+interface Sortable {
+    length: number;
+    compare(leftIndex: number, rightIndex: number): boolean;
+    swap(leftIndex: number, rightIndex: number): void;
+}
 
 export class Sorter {
 
-    constructor(public collection: NumbersCollection) { }
+    constructor(public collection: Sortable) { }
 
     //Bubble Sort
     sort(): void {
@@ -10,10 +15,10 @@ export class Sorter {
 
         let i = 0;
 
-        while (i < length - 1) {
+        while (i < length) {
 
-            let j = length
-            let start = 0
+            let j = length - 1;
+            let start = 0;
 
             while (start < j) {
 

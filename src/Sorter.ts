@@ -5,13 +5,16 @@ interface Sortable {
     swap(leftIndex: number, rightIndex: number): void;
 }
 
-export class Sorter {
+export abstract class Sorter {
 
-    constructor(public collection: Sortable) { }
+    abstract compare(leftIndex: number, rightIndex: number): boolean;
+    abstract swap(leftIndex: number, rightIndex: number): void;
+    abstract length: number;
+
 
     //Bubble Sort
     sort(): void {
-        let { length } = this.collection;
+        let { length } = this;
 
         let i = 0;
 
@@ -22,8 +25,8 @@ export class Sorter {
 
             while (start < j) {
 
-                if (this.collection.compare(start, start+1)) {
-                    this.collection.swap(start, start+1);
+                if (this.compare(start, start+1)) {
+                    this.swap(start, start+1);
                 }
                 start++;
 
